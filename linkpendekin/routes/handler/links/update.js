@@ -6,7 +6,7 @@ const QRCode = require('qrcode');
 module.exports = async (req, res) => {
     const schema = {
         url: 'url|empty:false',
-        short: 'string|empty:false|min:4|max:255',
+        short: 'string|empty:false|min:3|max:50',
     }
 
     const validate = v.validate(req.body, schema);

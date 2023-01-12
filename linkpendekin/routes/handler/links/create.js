@@ -58,7 +58,7 @@ module.exports = async (req, res) => {
         }
         console.log(hasilAlgo);
         short = hasilAlgo;
-        encodeurl = hasil
+        encodeurl = hasil // memasukkan encode url ke database
     }
 
     const token = req.headers?.authorization;
