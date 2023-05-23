@@ -16,7 +16,7 @@ module.exports = {
     "database": DB_NAME,
     "host": DB_HOST,
     "timezone": TZ,
-    "dialect": "mysql"
+    "dialect": "mysql",
   },
   "test": {
     "username": DB_USER,
@@ -24,7 +24,12 @@ module.exports = {
     "database": DB_NAME,
     "host": DB_HOST,
     "timezone": TZ,
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "dialectOptions":{
+      ssl: {
+        rejectUnauthorized: true,
+      },
+    }
   },
   "production": {
     "username": DB_USER,
@@ -32,6 +37,11 @@ module.exports = {
     "database": DB_NAME,
     "host": DB_HOST,
     "timezone": TZ,
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "dialectOptions":{
+      ssl: {
+        rejectUnauthorized: true,
+      },
+    }
   }
 }

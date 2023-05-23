@@ -58,6 +58,7 @@ export const getLinkByShort = (short) => {
 export const createLink = (data) => {
     return async dispatch => {
         try {
+            toast.loading("Algoritma Base64 Diproses", {duration: 4000, position: 'top-center'})
             dispatch({ type: LINK_LOADING })
             const res = await api.post("/links", data)
             dispatch({
@@ -69,7 +70,7 @@ export const createLink = (data) => {
                 }
             })
 
-            toast.success("Link created successfully")
+            toast.success("Link berhasil dibuat", {duration: 4000, position: 'top-center'})
             return res.data.data
         } catch (error) {
             dispatch({

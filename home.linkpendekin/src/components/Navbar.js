@@ -1,10 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/lihatin.png';
 import logoLogout from '../assets/img/logout.svg';
-import { logoutUser } from '../store/actions/users';
+import {logoutUser} from '../store/actions/users';
+
 
 function Navbar(props) {
     const navigate = useNavigate()
@@ -24,7 +25,7 @@ function Navbar(props) {
         <nav className="navbar navbar-dark">
             <div className="container">
                 <Link className="navbar-brand" to={'/'}>
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="logolihatin" style={{width: 100, height: 100}} color={'white'}/>
                 </Link>
                 <div className="ms-auto">
                     {
@@ -32,7 +33,7 @@ function Navbar(props) {
                             <div className="d-flex">
                                 <Link className="mb-0 me-2 text-white" to={'/dashboard'}>{props.user.data.email}</Link>
                                 <button onClick={logout} className='no-btn' disabled={props.user.loading}>
-                                    <img src={logoLogout} alt="" />
+                                    <img src={logoLogout} alt=""/>
                                 </button>
                             </div>
                             :

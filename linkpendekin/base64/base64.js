@@ -45,6 +45,7 @@ function encode(input) {
 function decode (input){
     var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-";
 
+    var output = ""
     var chr1, chr2, chr3;
 
     var enc1, enc2, enc3, enc4;
