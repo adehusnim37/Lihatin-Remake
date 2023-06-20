@@ -6,6 +6,7 @@ const {
 	DB_USER,
 	DB_PASS,
 	DB_NAME,
+    DB_PORT
 } = process.env
 
 
@@ -17,6 +18,7 @@ module.exports = {
     "host": DB_HOST,
     "timezone": TZ,
     "dialect": "mysql",
+    "port": DB_PORT
   },
   "test": {
     "username": DB_USER,
@@ -24,12 +26,7 @@ module.exports = {
     "database": DB_NAME,
     "host": DB_HOST,
     "timezone": TZ,
-    "dialect": "mysql",
-    "dialectOptions":{
-      ssl: {
-        rejectUnauthorized: true,
-      },
-    }
+    "dialect": "mysql"
   },
   "production": {
     "username": DB_USER,

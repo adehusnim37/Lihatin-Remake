@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend" : "cd ../home.linkpendekin && npm start",
-    "start": "concurrently \"nodemon index.js\" \"npm run frontend\""
+    "start": " nodemon index.js "
   },
   "keywords": [],
   "author": "",

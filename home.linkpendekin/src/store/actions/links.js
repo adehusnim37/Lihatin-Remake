@@ -78,7 +78,7 @@ export const createLink = (data) => {
                 payload: {
                     links: [],
                     loading: false,
-                    errMsg: error.message,
+                    errMsg: error.data.message,
                     errField: error.response.data.message
                 }
             })

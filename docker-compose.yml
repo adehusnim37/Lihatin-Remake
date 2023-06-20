@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: linkpendekin
+      dockerfile: Dockerfile
+    ports:
+      - "2000:2000"
+    volumes:
+      - /app/node_modules
+      - ./linkpendekin:/app
+      - public:/app/public
+    env_file:
+       - /linkpendekin/.env
+  frontend:
+    build: ./home.linkpendekin
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./home.linkpendekin/src:/app/src
+    env_file:
+      - /home.linkpendekin/.env
+    stdin_open: true
+    tty: true
+    depends_on:
+    - backend

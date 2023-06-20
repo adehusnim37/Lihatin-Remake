@@ -34,6 +34,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      encodeurl: {
+        allowNull: false,
+        type: Sequelize.STRING
       }
     });
 
